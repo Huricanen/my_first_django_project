@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% load  static %}
 <!DOCTYPE html>
 <html lang="ru">
@@ -11,6 +12,21 @@
     {% include "header.html" %}
     <main>
     {% block content%}{% endblock %}
+=======
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'app/style/styles.css' %}">
+</head>
+<body>
+    {% include "header.html" %}
+    <main>
+    {% block content %}{% endblock %}
+>>>>>>> 525a4ba (Сделана первая версия МП для ДЗ)
     </main>
     {% include "footer.html" %}
 </body>

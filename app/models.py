@@ -35,4 +35,9 @@ class Product(models.Model):
 
     class Meta():
         verbose_name = "Товар"
+<<<<<<< HEAD
         verbose_name_plural = "Товары"
+=======
+        verbose_name_plural = "Товары"
+        
+>>>>>>> 525a4ba (Сделана первая версия МП для ДЗ)

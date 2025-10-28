@@ -1,4 +1,35 @@
+<<<<<<< HEAD
 {% extends "base.html" %} {% block title %}Главная{% endblock%} {% block content
 %}
 <h1>Главная страница</h1>
 {% endblock %}
+=======
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Главная{% endblock %}
+{% block content %}
+<h1>
+    Главная страница
+</h1>
+<div class="gallery">
+    {% for product in products %}
+    <div class="product-card">
+        <h2 class="product-name">{{ product.name }}</h2>
+        <p class="product-description">{{ product.description }}</p>
+        <p class="product-price">{{ product.price }} руб.</p>
+        <img src="{{ product.image_url }}" class="product-image"/>
+        <p class="product-category">{{ product.category }}</p>
+        <p class="product-brand">{{ product.brand }}</p>
+    </div>
+    {% endfor %}
+</div>
+{% for brand in brands %}
+    <h2>{{ brand.name }} | {{ brand.country }}</h2>
+{% endfor %}
+
+{% for category in categories %}
+    <h2>{{ category.name }} | {{ category.parent_category }}</h2>
+{% endfor %}
+
+{% endblock %}
+>>>>>>> 525a4ba (Сделана первая версия МП для ДЗ)
